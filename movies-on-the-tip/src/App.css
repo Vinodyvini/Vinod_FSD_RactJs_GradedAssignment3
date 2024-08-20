@@ -1,0 +1,104 @@
+.movie-list, .favorite-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-card, .favorite-card {
+    width: 200px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.movie-poster, .favorite-poster {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.movie-detail, .favorite-title {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.4; /* Improved readability */
+    padding: 0 10px; /* Add padding for consistent spacing */
+    text-overflow: ellipsis; /* Ensure long titles are truncated */
+    overflow: hidden; /* Hide overflowed content */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.movie-card button, .favorite-card button {
+    background-color: #007bff; /* Adjust as needed */
+    color: white;
+    border: none;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    font-size: 16px;
+}
+
+    .movie-card button:hover, .favorite-card button:hover {
+        background-color: #0056b3; /* Adjust as needed */
+    }
+
+/* Specific styling for favorite cards */
+.favorite-card button {
+    background-color: #ff4d4d;
+}
+
+    .favorite-card button:hover {
+        background-color: #cc0000;
+    }
+
+.movie-detail-page {
+    display: grid;
+    grid-template-columns: 300px 1fr; /* Poster and movie info columns */
+    gap: 20px;
+    padding: 20px;
+    text-align: left;
+}
+
+.movie-detail-poster {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.movie-detail-page h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.movie-detail-page .movie-info {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Labels and values */
+    gap: 10px;
+}
+
+    .movie-detail-page .movie-info .label {
+        font-weight: bold;
+        text-align: right; /* Align labels to the right */
+    }
+
+    .movie-detail-page .movie-info .value {
+        text-align: left; /* Align values to the left */
+    }
+
+.movie-detail-page button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+    .movie-detail-page button:hover {
+        background-color: #0056b3;
+    }
